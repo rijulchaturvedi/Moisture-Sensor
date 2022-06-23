@@ -46,18 +46,18 @@ def sendEmail(smtp_message):
 		smtpObj = smtplib.SMTP(smtp_host, smtp_port)
 		smtpObj.login(smtp_username, smtp_password) # If you don't need to login to your smtp provider, simply remove this line
 		smtpObj.sendmail(smtp_sender, smtp_receivers, smtp_message)         
-		print "Successfully sent email"
+		print ("Successfully sent email")
 	except smtplib.SMTPException:
-		print "Error: unable to send email"
+		print ("Error: unable to send email")
 
 # This is our callback function, this function will be called every time there is a change on the specified GPIO channel, in this example we are using 17
 
 def callback(channel):  
 	if GPIO.input(channel):
-		print "LED off"
+		print ("LED off")
 		sendEmail(message_dead)
 	else:
-		print "LED on"
+		print ("LED on")
 		sendEmail(message_alive)
 
 # Set our GPIO numbering to BCM
