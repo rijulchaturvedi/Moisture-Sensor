@@ -24,20 +24,20 @@ smtp_receivers = ['rijchat@gmail.com'] # This is the TO email address
 
 # This is the message that will be sent when NO moisture is detected
 
-message_dead = """From: Sender Name <coelus.raspi@gmail.com>
+message_dead = """From: Coelus Plantu Raspberry Pi <coelus.raspi@gmail.com>
 To: Receiver Name <rijchat@gmail.com>
-Subject: Moisture Sensor Notification
+Subject: Soil Moisture Sensor Notification
 
-Warning, no moisture detected! Plant death imminent!!!
+Be advised. Soil moisture not detected! Plantu death imminent!!!
 """
 
 # This is the message that will be sent when moisture IS detected again
 
-message_alive = """From: Sender Name <coelus.raspi@gmail.com>
+message_alive = """From: Coelus Plantu Raspberry Pi <coelus.raspi@gmail.com>
 To: Receiver Name <rijchat@gmail.com>
-Subject: Moisture Sensor Notification
+Subject: Soil Moisture Sensor Notification
 
-Panic over! Plant has water again!
+Situation resolved! Plantu has water again!
 """
 
 # This is our sendEmail function
